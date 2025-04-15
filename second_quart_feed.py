@@ -19,6 +19,7 @@ import random
 os_name = platform.system()
 print("Operating System Name:", os_name)
 
+
 if os_name == 'Windows':
     driver_path = r"C:\Windows\chromedriver.exe"
     dir_path = r"C:\Users\durai\OneDrive\Desktop\sali\webdriver\user_list"
@@ -37,7 +38,7 @@ service = Service(driver_path)
 
 # Initialize counters for progress
 total_rows = 0
-completed_rows = 0
+completed_rows = 0s
 
 
 # Loop through CSV files
@@ -93,7 +94,7 @@ for filename in os.listdir(directory):
                     for feed in [random.choice(feedback)]:
                         driver.find_element("xpath", '//*[@id="question-list"]/div[9]/div[2]/div/span/input').send_key(feedback)
                     for ans in [random.choice(suggestions)]:
-                        driver.find_element("xpath", '//*[@id="question-list"]/div[10]/div[2]/div/span/input').sent_key(feedback)
+                        driver.find_element("xpath", '//*[@id="question-list"]/div[10]/div[2]/div/span/input').sent_key(suggestions)
                     
                     driver.find_element("xpath", '//*[@id="question-list"]/div[11]/div[2]/div/div[2]/div[5]/span/span/svg').click()
                                        
